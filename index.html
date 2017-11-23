@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>8 out of 10 cats does countdown</title>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <div id="Text" class="row">
+        <div class="col pt-4 pb-3">
+          <h1 id="Word">8 OUT OF 10 CATS DOES COUNTDOWN</h1>
+        </div>
+      </div>
+      <div id ="Letter" class="row">
+        <div class="col py-3">
+          <button id="btnConsonant" type="button">CONSONANT</button>
+        </div>
+        <div class="col py-3">
+          <button id="btnVowel" type="button">VOWEL</button>
+        </div>
+      </div>
+      <div id="Timer" class="row">
+        <div class="col py-1">
+          <h2 id="Clock">00:00</h2>
+        </div>
+      </div>
+      <span id="Submission">
+      <div  class="row">
+        <div class="col px-2 pt-4 pb-1">
+            <input id="txtName" class="align-middle" type="text" name="Name" placeholder="Name" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col px-2 pt-1 pb-1">
+            <input id="txtAnswer" type="text" name="Answer" maxlength="9" placeholder="Answer">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col px-2 pt-2 pb-3">
+            <!--<button id="btnSubmit" type="button">SUBMIT</button>-->
+            <p id="msgResult">&nbsp</p>
+        </div>
+      </div>
+      </span>
+      <div id ="answerAndHistory" class="row">
+         <div class="col px-2 pt-3 pt-3">
+            <h3 id="msgTopAnswer">Top Answers</h3>
+            <span id="topAnswer" class="text-uppercase"></span>
+        </div>
+        <div class="col px-2 pt-4 pt-3">
+            <h3>History</h3>
+            <span id="historyList">
+              <p>Joe got PIECED from DXFPCEUEI</p>
+              <p>Jane got LIONS from OIOIJNSLM</p>
+              <p>JM got GO from CQZLGUIOU</p>
+            </span>
+        </div>
+      </div>
+      <div id="Reset" class="row">
+        <div class="col px-2 pt-5">
+            <button id="btnReset" type="button">RESET</button>
+        </div>
+      </div>
+      <div id="Cat" class="row">
+        <div class="col fixed-bottom">        
+          <img src="images/cat1.jpg">
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    -->
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+   <script src="js/main.js"></script>
+  </body>
+</html>

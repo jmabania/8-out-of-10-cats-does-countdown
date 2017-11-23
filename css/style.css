@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Roboto:400,700,900');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+
+/*div {
+	border: 1px red solid;
+}*/
+
+
+h1 {
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+p {
+	padding-top: 2px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+button {
+	border: 1px black solid;
+	background-color: #FFF;
+	width: 200px;
+	height: 60px;
+	color: black;
+}
+
+button:hover {
+	background-color: #F5F5F5;
+	cursor: pointer;
+}
+
+input {
+	width: 200px;
+	height: 30px;
+	padding: 10px;
+}
+
+input:disabled {
+	background-color: #F5F5F5;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: auto;
+}
+
+.disabled {
+
+}
+
