@@ -51,7 +51,7 @@ function showTimerAndSubmission() {
   $('#Submission').removeClass('hide');
   //hide control and submission section
   $('#Letter').addClass('hide');
-  startCountdown(3);
+  startCountdown(1);
 }
 
 function checkAnswer() {
@@ -60,26 +60,42 @@ function checkAnswer() {
   if (word.length != 0) {
     var url = API_URL + 'lookup/' + word;
 
-    /*
     $.ajax({
-    url: url,
     type: 'GET',
-    jsonp: true,
-    crossDomain: true,
-    dataType: 'jsonp',
-    headers: { 'Access-Control-Allow-Origin': '*' },
-    success: function() { alert("Success!"); },
-    error: function() { alert('Failed!'); },
-    });
-    */
+    url: 'http://www.anagramica.com/lookup/hello?callback=?',
+    //data: {lookup: 'hello'},
+    //jsonp: true,
+    //crossDomain: true,
+    dataType: 'json',
+    //headers: { 'Access-Control-Allow-Origin': '*' },
+    success: function() { console.log('Success!'); },
+    error: function(sagot) { console.log('Error!'); },
+    complete: function (results) {
 
-    $.get(url, function(results) {
+
+
+
+console.log(results);
+
       if (results.found == 1) {
         $('#msgResult').html(word + ' is Valid!');
       } else {
         $('#msgResult').html(word + ' is Invalid!');
       };
+
+    }
     });
+    
+
+    /*$.get(url, function(results) {
+      if (results.found == 1) {
+        $('#msgResult').html(word + ' is Valid!');
+      } else {
+        $('#msgResult').html(word + ' is Invalid!');
+      };
+    },'jsonp');*/
+
+
   } else {
     $('#msgResult').html('Invalid!');
   };
@@ -94,6 +110,20 @@ function showAnswerandHistory() {
 
 function showTopAnswer () {
   var url = API_URL + 'all/' + randomWord;
+
+    /*$.ajax({
+    url: url,
+    jsonp: true,
+    crossDomain: true,
+    dataType: 'jsonp',
+    type: 'GET',
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    success: function() { console.log("Success!"); },
+    error: function() { console.log('Failed!'); }
+    });
+
+*/
+
   $.get(url, function(results) {
     if (results.all[0].length<=2) {
       $('#msgTopAnswer').html('No results found');
@@ -104,7 +134,7 @@ function showTopAnswer () {
         };
       };
     };
-  });
+  },'jsonp' );
 }
 
 
