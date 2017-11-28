@@ -62,11 +62,11 @@ function checkAnswer() {
 
     $.ajax({
     type: 'GET',
-    url: 'http://www.anagramica.com/lookup/hello?callback=?',
+    url: 'http://services.aonaware.com/CountCheatService/CountCheatService.asmx/LetterSolutions?anagram=string',
     //data: {lookup: 'hello'},
     //jsonp: true,
     //crossDomain: true,
-    dataType: 'json',
+    //dataType: 'json',
     //headers: { 'Access-Control-Allow-Origin': '*' },
     success: function() { console.log('Success!'); },
     error: function(sagot) { console.log('Error!'); },
