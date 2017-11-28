@@ -62,19 +62,15 @@ function checkAnswer() {
 
     $.ajax({
     type: 'GET',
-    url: 'http://services.aonaware.com/CountCheatService/CountCheatService.asmx/LetterSolutions?anagram=string',
+    url: 'https://services.aonaware.com/CountCheatService/CountCheatService.asmx/LetterSolutions?anagram=string',
     //data: {lookup: 'hello'},
     //jsonp: true,
     //crossDomain: true,
-    //dataType: 'json',
+    dataType: 'xml',
     //headers: { 'Access-Control-Allow-Origin': '*' },
     success: function() { console.log('Success!'); },
     error: function(sagot) { console.log('Error!'); },
     complete: function (results) {
-
-
-
-
 console.log(results);
 
       if (results.found == 1) {
