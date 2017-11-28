@@ -105,7 +105,8 @@ function showAnswerandHistory() {
 }
 
 function showTopAnswer () {
-  var url = API_URL + 'all/' + randomWord;
+  var url = "https://services.aonaware.com/CountCheatService/CountCheatService.asmx/LetterSolutions?anagram=string";
+  //API_URL + 'all/' + randomWord;
 
     /*$.ajax({
     url: url,
@@ -130,7 +131,7 @@ function showTopAnswer () {
         };
       };
     };
-  },'jsonp' );
+  },'xml' );
 }
 
 
