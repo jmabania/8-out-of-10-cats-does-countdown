@@ -9,18 +9,22 @@ var randomWord = "";
 var randomWordDisplay = "";
 
 //var RapidAPI = new require('rapidapi-connect');
-var rapid = new RapidAPI('8-out-of-10-cats_5a1ff825e4b07e6c1dd20b75', 'a3963a5d-8dc0-47aa-b09e-edbf31b827af');
 
-rapid.call('PackageName', 'FunctionName', { 
-  'ParameterKey1': 'ParameterValue1',
-  'ParameterKey2': 'ParameterValue2',
-}).on('success', function (payload) {
-   /*YOUR CODE GOES HERE*/ 
-   console.log('tama');
-}).on('error', function (payload) {
-   /*YOUR CODE GOES HERE*/
-   console.log('mali'); 
-});
+
+$.ajax({
+    type: "GET",
+    url: "https://danielthepope-countdown-v1.p.mashape.com/solve/pimgatner?variance=1",
+    //data: {lookup: 'hello'},
+    //jsonp: true,
+    //crossDomain: true,
+    //dataType: 'json',
+    //headers: { 'Access-Control-Allow-Origin': '*' },
+    headers: { "X-Mashape-Key": "Ls7ws4CUSKmshGa4LZzElSmnwN4Yp1Zrz3QjsnIcGUA6ZvIYyj" },
+    headers: { "Accept": "applciation/json" },
+    success: function() { console.log('Success!!!!!'); },
+    error: function(sagot) { console.log('Error!!!!!!'); },
+    complete: function (results) {console.log('Complete!!!!!!')}
+    });
 
 /*
 FUNCTIONS
