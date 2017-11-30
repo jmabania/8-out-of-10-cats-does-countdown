@@ -8,6 +8,19 @@ var API_URL = 'http://www.anagramica.com/';
 var randomWord = "";
 var randomWordDisplay = "";
 
+//var RapidAPI = new require('rapidapi-connect');
+var rapid = new RapidAPI('8-out-of-10-cats_5a1ff825e4b07e6c1dd20b75', 'a3963a5d-8dc0-47aa-b09e-edbf31b827af');
+
+rapid.call('PackageName', 'FunctionName', { 
+  'ParameterKey1': 'ParameterValue1',
+  'ParameterKey2': 'ParameterValue2',
+}).on('success', function (payload) {
+   /*YOUR CODE GOES HERE*/ 
+   console.log('tama');
+}).on('error', function (payload) {
+   /*YOUR CODE GOES HERE*/
+   console.log('mali'); 
+});
 
 /*
 FUNCTIONS
